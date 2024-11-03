@@ -23,12 +23,13 @@
                         class="border p-3 w-full rounded-lg @error('name') border-red-500
                             
                         @enderror"
-                        value="{{ old('name')}}">
-                        @error('name')
-                            <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center"> 
-                                {{$message}}
-                            </p>
-                        @enderror
+                        value="{{ old('name') }}">
+                    @error('name')
+                        <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
+                            {{ $message }}
+                        </p>
+                    @enderror
+                    
                 </div>
                 <div class="mb-5">
 
@@ -37,13 +38,13 @@
                     </label>
                     <input id="username" name="username" placeholder="Tu nombre de usuario" type="text"
                         class="border p-3 w-full rounded-lg @error('name') border-red-500
-                            
-                        @enderror">
-                        @error('username')
-                            <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center"> 
-                                {{$message}}
-                            </p>
-                        @enderror
+                        @enderror"
+                        value="{{ old('username') }}">
+                    @error('username')
+                        <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
+                            {{ $message }}
+                        </p>
+                    @enderror
                 </div>
 
                 <div class="mb-5">
@@ -54,12 +55,13 @@
                     <input id="email" name="email" placeholder="Ingresa tu email" type="email"
                         class="border p-3 w-full rounded-lg @error('name') border-red-500
                             
-                        @enderror">
-                        @error('email')
-                            <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center"> 
-                                {{$message}}
-                            </p>
-                        @enderror
+                        @enderror"
+                        value="{{ old('email') }}">
+                    @error('email')
+                        <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
+                            {{ $message }}
+                        </p>
+                    @enderror
                 </div>
                 <div class="mb-5">
 
@@ -70,11 +72,11 @@
                         class="border p-3 w-full rounded-lg @error('name') border-red-500
                             
                         @enderror">
-                        @error('password')
-                            <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center"> 
-                                {{$message}}
-                            </p>
-                        @enderror
+                    @error('password')
+                        <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
+                            {{ $message }}
+                        </p>
+                    @enderror
                 </div>
 
                 <div class="mb-5">
