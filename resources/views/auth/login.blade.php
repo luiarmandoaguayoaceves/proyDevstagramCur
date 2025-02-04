@@ -1,4 +1,4 @@
-@extends('layouts.app');
+@extends('layouts.app')
 
 @section('titulo')
     Iniciar Sesión en DevStagram
@@ -13,8 +13,14 @@
 
         <div class="md:w-4/12 bg-white p-6 rounded-lg shadow-xl">
 
-            <form  novalidate>
+            <form method="POST" action="{{route('login')}}" novalidate>
                 @csrf
+
+                @if(session('mensaje'))
+                    <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
+                        {{ session('mensaje') }}
+                    </p>
+                @endsession
 
                 <div class="mb-5">
 
