@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevStagram - @yield('titulo')</title>
+    @stack('styles')
     @vite('resources/css/app.css')
+    @vite('resources/js/app.js')
 </head>
 
 <body class="bg-gray-100">
@@ -56,5 +58,4 @@
         DevStagram - Todos los derechos reservados {{ now()->year }}
     </footer>
 </body>
-
 </html>

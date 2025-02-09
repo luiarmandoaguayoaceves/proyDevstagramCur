@@ -6,5 +6,7 @@ use Illuminate\Http\Request;
 
 class ImagenController extends Controller
 {
-    //
+    public function  store() {
+        return 'Desde imagen controller....';
+    }
 }

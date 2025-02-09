@@ -7,8 +7,8 @@
 @section('contenido')
     <div class="md:flex md:items-center">
         <div class="md:w-1/2 px-10">
-            <form id="dropzone"
-                class="dropzone border-dashed border-2 w-full h-96 rounded flex flex-col justify-center items-center"></form>
+            <form action="{{ route('imagenes.store') }}" method="POST" enctype="multipart/form-data" id="dropzone" class="dropzone border-dashed border-2 w-full h-96 rounded flex flex-col justify-center items-center">
+            </form>
         </div>
         <div class="md:w-1/2 p-10 bg-white rounded-lg shadow-xl mt-10 md:mt-0">
             <form href={{ route('register') }} method="POST" novalidate>
