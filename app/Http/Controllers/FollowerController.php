@@ -13,14 +13,9 @@ class FollowerController extends Controller
         $user->followers()->attach(auth()->user()->id);
         return redirect()->back();
     }
-    public function destroy(User  $user, Request $request)
+    public function destroy(User $user, Request $request)
     {
-        $follower = auth()->user();
-   
-        if ($user->id !== $follower->id) {
-            $user->followers()->detach($follower->id);
-        }
-
+        $user->followers()->detach(auth()->user()->id);
         return redirect()->back();
     }
 }
