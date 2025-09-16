@@ -7,7 +7,11 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     //
-    public function index() {
-        return view('principal');
+    public function index() 
+    {
+        //Obtener a quienes seguimos
+
+        dd(auth()->user()->followings->pluck('id')->toArray());
+        return view('home');
     }
 }
