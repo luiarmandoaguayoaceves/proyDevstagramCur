@@ -33,7 +33,7 @@
                     <span class="font-normal"> <?php echo app('translator')->choice('Seguidor|Seguidores', $user->followers->count()); ?></span>
                 </p>
                 <p class="to-gray-800 text-sm mb-3 font-bold">
-                    <?php echo e($user->following->count()); ?>
+                    <?php echo e($user->followings->count()); ?>
 
                     <span class="font-normal">Siguiendo</span>
                 </p>
