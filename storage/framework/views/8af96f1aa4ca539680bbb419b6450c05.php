@@ -8,6 +8,9 @@
     <?php echo $__env->yieldPushContent('styles'); ?>
     <?php echo app('Illuminate\Foundation\Vite')('resources/css/app.css'); ?>
     <?php echo app('Illuminate\Foundation\Vite')('resources/js/app.js'); ?>
+
+    <?php echo \Livewire\Mechanisms\FrontendAssets\FrontendAssets::styles(); ?>
+
 </head>
 
 <body class="bg-gray-100">
@@ -58,6 +61,8 @@
         DevStagram - Todos los derechos reservados <?php echo e(now()->year); ?>
 
     </footer>
+    <?php echo \Livewire\Mechanisms\FrontendAssets\FrontendAssets::scripts(); ?>
+
 </body>
 </html>
 <?php /**PATH /var/www/html/resources/views/layouts/app.blade.php ENDPATH**/ ?>

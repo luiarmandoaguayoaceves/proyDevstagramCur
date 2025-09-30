@@ -70,25 +70,26 @@
     <section class="container mx-auto mt-10">
         <h2 class="text-4xl text-center font-black my-10">Publicaciones</h2>
 
-        <?php if($posts->count()): ?>
-            <div class= 'grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
-
-                <?php $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <div>
-                        <a href="<?php echo e(route('posts.show', ['user' => $user, 'post' => $post])); ?>">
-                            <img src="<?php echo e(asset('uploads') . '/' . $post->imagen); ?>"
-                                alt="Imagen del post <?php echo e($post->titulo); ?>">
-                        </a>
-                    </div>
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            </div>
-            <div class="mt-10">
-                <?php echo e($posts->links('pagination::tailwind')); ?>
-
-            </div>
-        <?php else: ?>
-            <p class="text-gray-600 uppercase text-sm text-center font-bold ">No hay post</p>
-        <?php endif; ?>
+        <?php if (isset($component)) { $__componentOriginal00fa8af295fc1af9e68d7d311d812473 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal00fa8af295fc1af9e68d7d311d812473 = $attributes; } ?>
+<?php $component = App\View\Components\ListarPost::resolve(['posts' => $posts] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('listar-post'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\App\View\Components\ListarPost::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal00fa8af295fc1af9e68d7d311d812473)): ?>
+<?php $attributes = $__attributesOriginal00fa8af295fc1af9e68d7d311d812473; ?>
+<?php unset($__attributesOriginal00fa8af295fc1af9e68d7d311d812473); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal00fa8af295fc1af9e68d7d311d812473)): ?>
+<?php $component = $__componentOriginal00fa8af295fc1af9e68d7d311d812473; ?>
+<?php unset($__componentOriginal00fa8af295fc1af9e68d7d311d812473); ?>
+<?php endif; ?>
     </section>
 <?php $__env->stopSection(); ?>
 
